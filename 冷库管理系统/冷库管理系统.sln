@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 14
+VisualStudioVersion = 14.0.23107.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "冷库管理系统", "冷库管理系统\冷库管理系统.csproj", "{B0406B8F-C905-4479-89B6-52DCA1634AF2}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B0406B8F-C905-4479-89B6-52DCA1634AF2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B0406B8F-C905-4479-89B6-52DCA1634AF2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B0406B8F-C905-4479-89B6-52DCA1634AF2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B0406B8F-C905-4479-89B6-52DCA1634AF2}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

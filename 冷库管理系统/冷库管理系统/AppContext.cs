@@ -1,0 +1,20 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Data.Entity;
+using System.Linq;
+using System.Text;
+using 冷库管理系统.Models;
+
+namespace 冷库管理系统
+{
+    public class AppContext:DbContext
+    {
+        public AppContext() : base("AppContext")
+        {
+
+        }
+
+        public DbSet<GuoNong> GuoNongs { get; set; }
+
+    }
+}
