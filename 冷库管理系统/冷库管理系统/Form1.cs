@@ -21,5 +21,17 @@ namespace 冷库管理系统
             var f=new GuoNongList();
             f.Show();
         }
+
+        private void 规格管理ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var f = new GuiGeList();
+            f.Show();
+        }
+
+        private void 级别管理ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var f = new JiBieList();
+            f.Show();
+        }
     }
 }

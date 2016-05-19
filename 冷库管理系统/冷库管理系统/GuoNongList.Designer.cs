@@ -39,7 +39,7 @@
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.序号 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.姓名 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.创建时间 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.备注 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.contextMenuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -79,8 +79,8 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.dataGridView1);
-            this.splitContainer1.Size = new System.Drawing.Size(447, 457);
-            this.splitContainer1.SplitterDistance = 47;
+            this.splitContainer1.Size = new System.Drawing.Size(444, 456);
+            this.splitContainer1.SplitterDistance = 46;
             this.splitContainer1.TabIndex = 2;
             // 
             // button2
@@ -128,7 +128,7 @@
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.序号,
             this.姓名,
-            this.创建时间});
+            this.备注});
             this.dataGridView1.ContextMenuStrip = this.contextMenuStrip1;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(0, 0);
@@ -138,7 +138,7 @@
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.RowTemplate.Height = 23;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(447, 406);
+            this.dataGridView1.Size = new System.Drawing.Size(444, 406);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_CellMouseDoubleClick);
             // 
@@ -156,21 +156,20 @@
             this.姓名.HeaderText = "姓名";
             this.姓名.Name = "姓名";
             this.姓名.ReadOnly = true;
-            this.姓名.Width = 200;
             // 
-            // 创建时间
+            // 备注
             // 
-            this.创建时间.DataPropertyName = "CreateTime";
-            this.创建时间.HeaderText = "创建时间";
-            this.创建时间.Name = "创建时间";
-            this.创建时间.ReadOnly = true;
-            this.创建时间.Width = 200;
+            this.备注.DataPropertyName = "Remark";
+            this.备注.HeaderText = "备注";
+            this.备注.Name = "备注";
+            this.备注.ReadOnly = true;
+            this.备注.Width = 300;
             // 
             // GuoNongList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(447, 457);
+            this.ClientSize = new System.Drawing.Size(444, 456);
             this.Controls.Add(this.splitContainer1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
@@ -201,6 +200,6 @@
         private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DataGridViewTextBoxColumn 序号;
         private System.Windows.Forms.DataGridViewTextBoxColumn 姓名;
-        private System.Windows.Forms.DataGridViewTextBoxColumn 创建时间;
+        private System.Windows.Forms.DataGridViewTextBoxColumn 备注;
     }
 }

@@ -13,5 +13,7 @@ namespace 冷库管理系统.Models
 
         public DateTime CreateTime { get; set; }
 
+        public string Remark { get; set; }
+
     }
 }

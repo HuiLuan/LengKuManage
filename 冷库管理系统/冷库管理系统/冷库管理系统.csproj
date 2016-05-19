@@ -64,6 +64,18 @@
     <Compile Include="Form1.Designer.cs">
       <DependentUpon>Form1.cs</DependentUpon>
     </Compile>
+    <Compile Include="GuiGeEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GuiGeEdit.Designer.cs">
+      <DependentUpon>GuiGeEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GuiGeList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GuiGeList.Designer.cs">
+      <DependentUpon>GuiGeList.cs</DependentUpon>
+    </Compile>
     <Compile Include="GuoNongEdit.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -76,9 +88,23 @@
     <Compile Include="GuoNongList.Designer.cs">
       <DependentUpon>GuoNongList.cs</DependentUpon>
     </Compile>
+    <Compile Include="JiBieEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="JiBieEdit.Designer.cs">
+      <DependentUpon>JiBieEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="JiBieList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="JiBieList.Designer.cs">
+      <DependentUpon>JiBieList.cs</DependentUpon>
+    </Compile>
     <Compile Include="Models\BaseInfo.cs" />
     <Compile Include="Models\DbBase.cs" />
+    <Compile Include="Models\GuiGe.cs" />
     <Compile Include="Models\GuoNong.cs" />
+    <Compile Include="Models\JiBie.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Utils\PinYinUtil\HHPinYin.cs" />
@@ -87,11 +113,23 @@
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="GuiGeEdit.resx">
+      <DependentUpon>GuiGeEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GuiGeList.resx">
+      <DependentUpon>GuiGeList.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="GuoNongEdit.resx">
       <DependentUpon>GuoNongEdit.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="GuoNongList.resx">
       <DependentUpon>GuoNongList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JiBieEdit.resx">
+      <DependentUpon>JiBieEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="JiBieList.resx">
+      <DependentUpon>JiBieList.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

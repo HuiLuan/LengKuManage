@@ -52,12 +52,14 @@
             this.规格管理ToolStripMenuItem.Name = "规格管理ToolStripMenuItem";
             this.规格管理ToolStripMenuItem.Size = new System.Drawing.Size(68, 21);
             this.规格管理ToolStripMenuItem.Text = "规格管理";
+            this.规格管理ToolStripMenuItem.Click += new System.EventHandler(this.规格管理ToolStripMenuItem_Click);
             // 
             // 级别管理ToolStripMenuItem
             // 
             this.级别管理ToolStripMenuItem.Name = "级别管理ToolStripMenuItem";
             this.级别管理ToolStripMenuItem.Size = new System.Drawing.Size(68, 21);
             this.级别管理ToolStripMenuItem.Text = "级别管理";
+            this.级别管理ToolStripMenuItem.Click += new System.EventHandler(this.级别管理ToolStripMenuItem_Click);
             // 
             // 果农管理ToolStripMenuItem
             // 

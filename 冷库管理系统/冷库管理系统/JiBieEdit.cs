@@ -11,8 +11,13 @@ using 冷库管理系统.Utils.PinYinUtil;
 
 namespace 冷库管理系统
 {
-    public partial class GuoNongEdit : Form
+    public partial class JiBieEdit : Form
     {
+        public JiBieEdit()
+        {
+            InitializeComponent();
+        }
+
         private long mId;
 
         public void Init(long id)
@@ -20,47 +25,41 @@ namespace 冷库管理系统
             mId = id;
         }
 
-        public GuoNongEdit()
-        {
-            InitializeComponent();
-        }
-
         private void button1_Click(object sender, EventArgs e)
         {
-
             using (var db = new AppContext())
             {
                 if (mId > 0)
                 {
-                    var guoNong = db.GuoNongs.Find(mId);
-                    //db.GuoNongs.Attach(guoNong);
-                    guoNong.Name = textBox1.Text.Trim();
-                    guoNong.Spell = HHPinYin.GetInitials(guoNong.Name);
-                    guoNong.Remark = textBox2.Text.Trim();
+                    var dmo = db.JiBies.Find(mId);
+
+                    dmo.Name = textBox1.Text.Trim();
+                    dmo.Spell = HHPinYin.GetInitials(dmo.Name);
+                    dmo.Remark = textBox2.Text.Trim();
 
                 }
                 else
                 {
-                    var guoNong = new GuoNong();
-                    guoNong.Name = textBox1.Text.Trim();
-                    guoNong.Spell = HHPinYin.GetInitials(guoNong.Name);
-                    guoNong.CreateTime = DateTime.Now;
-                    guoNong.Remark = textBox2.Text.Trim();
-                    db.GuoNongs.Add(guoNong);
+                    var dmo = new JiBie();
+                    dmo.Name = textBox1.Text.Trim();
+                    dmo.Spell = HHPinYin.GetInitials(dmo.Name);
+                    dmo.CreateTime = DateTime.Now;
+                    dmo.Remark = textBox2.Text.Trim();
+                    db.JiBies.Add(dmo);
                 }
                 db.SaveChanges();
             }
-            DialogResult=DialogResult.OK;
+            DialogResult = DialogResult.OK;
             Close();
         }
 
-        private void GuoNongEdit_Load(object sender, EventArgs e)
+        private void JiBieEdit_Load(object sender, EventArgs e)
         {
             if (mId > 0)
             {
                 using (var db = new AppContext())
                 {
-                    var gn = db.GuoNongs.Find(mId);
+                    var gn = db.JiBies.Find(mId);
                     textBox1.Text = gn.Name;
                     textBox2.Text = gn.Remark;
                 }
