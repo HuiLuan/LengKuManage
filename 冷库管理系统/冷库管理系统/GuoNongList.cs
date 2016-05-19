@@ -14,6 +14,7 @@ namespace 冷库管理系统
         public GuoNongList()
         {
             InitializeComponent();
+            dataGridView1.AutoGenerateColumns = false;
         }
 
         private void GuoNongList_Load(object sender, EventArgs e)
@@ -48,6 +49,44 @@ namespace 冷库管理系统
         {
             var f=new GuoNongEdit();
             if (f.ShowDialog() == DialogResult.OK)
+            {
+                BindGridView();
+            }
+        }
+
+        private void dataGridView1_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            var id = dataGridView1.Rows[e.RowIndex].Cells[0].Value;
+            var f = new GuoNongEdit();
+            f.Init(Convert.ToInt64(id));
+            if (f.ShowDialog() == DialogResult.OK)
+            {
+                BindGridView();
+            }
+        }
+
+        private void 删除选中ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("确定删除选中行吗？", "删除", MessageBoxButtons.OKCancel) == DialogResult.OK)
+            {
+                if (dataGridView1.SelectedRows.Count < 1)
+                {
+                    return;
+                }
+                var id = dataGridView1.SelectedRows[0].Cells[0].Value;
+                using (var db=new AppContext())
+                {
+                    var gn = db.GuoNongs.Find(id);
+                    db.GuoNongs.Remove(gn);
+                    db.SaveChanges();
+                }
+                BindGridView();
+            }
+        }
+
+        private void textBox1_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if (e.KeyChar == 13)
             {
                 BindGridView();
             }

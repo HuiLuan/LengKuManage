@@ -35,19 +35,21 @@ namespace 冷库管理系统
                     var guoNong = db.GuoNongs.Find(mId);
                     //db.GuoNongs.Attach(guoNong);
                     guoNong.Name = textBox1.Text.Trim();
-                    guoNong.Spell = HHPinYin.GetPinyin(guoNong.Name);
+                    guoNong.Spell = HHPinYin.GetInitials(guoNong.Name);
 
                 }
                 else
                 {
                     var guoNong = new GuoNong();
                     guoNong.Name = textBox1.Text.Trim();
-                    guoNong.Spell = HHPinYin.GetPinyin(guoNong.Name);
+                    guoNong.Spell = HHPinYin.GetInitials(guoNong.Name);
                     guoNong.CreateTime = DateTime.Now;
                     db.GuoNongs.Add(guoNong);
                 }
                 db.SaveChanges();
             }
+            DialogResult=DialogResult.OK;
+            Close();
         }
 
         private void GuoNongEdit_Load(object sender, EventArgs e)
