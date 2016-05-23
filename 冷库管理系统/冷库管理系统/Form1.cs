@@ -33,5 +33,11 @@ namespace 冷库管理系统
             var f = new JiBieList();
             f.Show();
         }
+
+        private void 新增入库ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var f=new InStoreEdit();
+            f.Show();
+        }
     }
 }

@@ -32,6 +32,9 @@
             this.规格管理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.级别管理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.果农管理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.入库管理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.新增入库ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.入库查询ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -40,7 +43,8 @@
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.规格管理ToolStripMenuItem,
             this.级别管理ToolStripMenuItem,
-            this.果农管理ToolStripMenuItem});
+            this.果农管理ToolStripMenuItem,
+            this.入库管理ToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(1022, 25);
@@ -68,6 +72,28 @@
             this.果农管理ToolStripMenuItem.Text = "果农管理";
             this.果农管理ToolStripMenuItem.Click += new System.EventHandler(this.果农管理ToolStripMenuItem_Click);
             // 
+            // 入库管理ToolStripMenuItem
+            // 
+            this.入库管理ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.新增入库ToolStripMenuItem,
+            this.入库查询ToolStripMenuItem});
+            this.入库管理ToolStripMenuItem.Name = "入库管理ToolStripMenuItem";
+            this.入库管理ToolStripMenuItem.Size = new System.Drawing.Size(68, 21);
+            this.入库管理ToolStripMenuItem.Text = "入库管理";
+            // 
+            // 新增入库ToolStripMenuItem
+            // 
+            this.新增入库ToolStripMenuItem.Name = "新增入库ToolStripMenuItem";
+            this.新增入库ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.新增入库ToolStripMenuItem.Text = "新增入库";
+            this.新增入库ToolStripMenuItem.Click += new System.EventHandler(this.新增入库ToolStripMenuItem_Click);
+            // 
+            // 入库查询ToolStripMenuItem
+            // 
+            this.入库查询ToolStripMenuItem.Name = "入库查询ToolStripMenuItem";
+            this.入库查询ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.入库查询ToolStripMenuItem.Text = "入库查询";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -90,6 +116,9 @@
         private System.Windows.Forms.ToolStripMenuItem 规格管理ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 级别管理ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 果农管理ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 入库管理ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 新增入库ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 入库查询ToolStripMenuItem;
     }
 }
 
