@@ -76,7 +76,7 @@ namespace 冷库管理系统
         private void button1_Click(object sender, EventArgs e)
         {
 
-            if (cbxGuoNong.SelectedIndex == 0)
+            if (cbxGuoNong.SelectedIndex <= 0)
             {
                 MessageBox.Show("果农不能为空");
                 return;
@@ -86,21 +86,13 @@ namespace 冷库管理系统
                 MessageBox.Show("重量不能为空");
                 return;
             }
-            if (string.IsNullOrWhiteSpace(txtPrice.Text))
-            {
-                MessageBox.Show("单价不能为空");
-                return;
-            }
+         
             if (string.IsNullOrWhiteSpace(txtNumber.Text))
             {
                 MessageBox.Show("数量不能为空");
                 return;
             }
-            if (string.IsNullOrWhiteSpace(txtMoney.Text))
-            {
-                MessageBox.Show("金额不能为空");
-                return;
-            }
+       
 
             using (var db=new AppContext())
             {
@@ -119,7 +111,10 @@ namespace 冷库管理系统
                 instore.JiBieId= Convert.ToInt64(cbxJiBie.SelectedValue);
 
                 instore.Weight = Convert.ToDecimal(txtWeight.Text);
-                instore.Price = Convert.ToDecimal(txtPrice.Text);
+                if (!string.IsNullOrWhiteSpace(txtPrice.Text))
+                {
+                    instore.Price = Convert.ToDecimal(txtPrice.Text);
+                }
                 instore.Number = Convert.ToInt32(txtNumber.Text);
                 instore.Money = Convert.ToDecimal(txtMoney.Text);
 
@@ -129,7 +124,9 @@ namespace 冷库管理系统
                 }
                 db.SaveChanges();
             }
+            DialogResult=DialogResult.OK;
             MessageBox.Show("保存成功");
+            Close();
         }
 
         private void SetMoney()

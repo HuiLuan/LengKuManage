@@ -7,5 +7,9 @@ namespace 冷库管理系统.Models
 {
     public class GuiGe:BaseInfo
     {
+        public override string ToString()
+        {
+            return Name;
+        }
     }
 }

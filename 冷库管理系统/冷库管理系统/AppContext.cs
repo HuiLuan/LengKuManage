@@ -18,6 +18,7 @@ namespace 冷库管理系统
         public DbSet<GuiGe> GuiGes { get; set; }
         public DbSet<JiBie> JiBies { get; set; }
         public DbSet<InStore> InStores { get; set; }
+        public DbSet<OutStore> OutStores { get; set; }
 
     }
 }

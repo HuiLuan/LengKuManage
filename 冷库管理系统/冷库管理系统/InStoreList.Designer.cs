@@ -1,16 +1,16 @@
 ﻿namespace 冷库管理系统
 {
-    partial class Form1
+    partial class InStoreList
     {
         /// <summary>
-        /// 必需的设计器变量。
+        /// Required designer variable.
         /// </summary>
         private System.ComponentModel.IContainer components = null;
 
         /// <summary>
-        /// 清理所有正在使用的资源。
+        /// Clean up any resources being used.
         /// </summary>
-        /// <param name="disposing">如果应释放托管资源，为 true；否则为 false。</param>
+        /// <param name="disposing">true if managed resources should be disposed; otherwise, false.</param>
         protected override void Dispose(bool disposing)
         {
             if (disposing && (components != null))
@@ -20,11 +20,11 @@
             base.Dispose(disposing);
         }
 
-        #region Windows 窗体设计器生成的代码
+        #region Windows Form Designer generated code
 
         /// <summary>
-        /// 设计器支持所需的方法 - 不要修改
-        /// 使用代码编辑器修改此方法的内容。
+        /// Required method for Designer support - do not modify
+        /// the contents of this method with the code editor.
         /// </summary>
         private void InitializeComponent()
         {
@@ -37,13 +37,6 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
-            this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.规格管理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.级别管理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.果农管理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.入库管理ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.新增入库ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.入库查询ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
@@ -70,8 +63,6 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.button3 = new System.Windows.Forms.Button();
-            this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -83,68 +74,11 @@
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.SuspendLayout();
             // 
-            // menuStrip1
-            // 
-            this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.规格管理ToolStripMenuItem,
-            this.级别管理ToolStripMenuItem,
-            this.果农管理ToolStripMenuItem,
-            this.入库管理ToolStripMenuItem});
-            this.menuStrip1.Location = new System.Drawing.Point(0, 0);
-            this.menuStrip1.Name = "menuStrip1";
-            this.menuStrip1.Size = new System.Drawing.Size(853, 25);
-            this.menuStrip1.TabIndex = 0;
-            this.menuStrip1.Text = "menuStrip1";
-            // 
-            // 规格管理ToolStripMenuItem
-            // 
-            this.规格管理ToolStripMenuItem.Name = "规格管理ToolStripMenuItem";
-            this.规格管理ToolStripMenuItem.Size = new System.Drawing.Size(68, 21);
-            this.规格管理ToolStripMenuItem.Text = "规格管理";
-            this.规格管理ToolStripMenuItem.Click += new System.EventHandler(this.规格管理ToolStripMenuItem_Click);
-            // 
-            // 级别管理ToolStripMenuItem
-            // 
-            this.级别管理ToolStripMenuItem.Name = "级别管理ToolStripMenuItem";
-            this.级别管理ToolStripMenuItem.Size = new System.Drawing.Size(68, 21);
-            this.级别管理ToolStripMenuItem.Text = "级别管理";
-            this.级别管理ToolStripMenuItem.Click += new System.EventHandler(this.级别管理ToolStripMenuItem_Click);
-            // 
-            // 果农管理ToolStripMenuItem
-            // 
-            this.果农管理ToolStripMenuItem.Name = "果农管理ToolStripMenuItem";
-            this.果农管理ToolStripMenuItem.Size = new System.Drawing.Size(68, 21);
-            this.果农管理ToolStripMenuItem.Text = "果农管理";
-            this.果农管理ToolStripMenuItem.Click += new System.EventHandler(this.果农管理ToolStripMenuItem_Click);
-            // 
-            // 入库管理ToolStripMenuItem
-            // 
-            this.入库管理ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.新增入库ToolStripMenuItem,
-            this.入库查询ToolStripMenuItem});
-            this.入库管理ToolStripMenuItem.Name = "入库管理ToolStripMenuItem";
-            this.入库管理ToolStripMenuItem.Size = new System.Drawing.Size(68, 21);
-            this.入库管理ToolStripMenuItem.Text = "入库管理";
-            // 
-            // 新增入库ToolStripMenuItem
-            // 
-            this.新增入库ToolStripMenuItem.Name = "新增入库ToolStripMenuItem";
-            this.新增入库ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.新增入库ToolStripMenuItem.Text = "新增入库";
-            this.新增入库ToolStripMenuItem.Click += new System.EventHandler(this.新增入库ToolStripMenuItem_Click);
-            // 
-            // 入库查询ToolStripMenuItem
-            // 
-            this.入库查询ToolStripMenuItem.Name = "入库查询ToolStripMenuItem";
-            this.入库查询ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
-            this.入库查询ToolStripMenuItem.Text = "入库查询";
-            this.入库查询ToolStripMenuItem.Click += new System.EventHandler(this.入库查询ToolStripMenuItem_Click);
-            // 
             // splitContainer1
             // 
             this.splitContainer1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.splitContainer1.FixedPanel = System.Windows.Forms.FixedPanel.Panel1;
-            this.splitContainer1.Location = new System.Drawing.Point(0, 25);
+            this.splitContainer1.Location = new System.Drawing.Point(0, 0);
             this.splitContainer1.Name = "splitContainer1";
             this.splitContainer1.Orientation = System.Windows.Forms.Orientation.Horizontal;
             // 
@@ -162,17 +96,17 @@
             // splitContainer1.Panel2
             // 
             this.splitContainer1.Panel2.Controls.Add(this.splitContainer2);
-            this.splitContainer1.Size = new System.Drawing.Size(853, 597);
+            this.splitContainer1.Size = new System.Drawing.Size(850, 561);
             this.splitContainer1.SplitterDistance = 44;
-            this.splitContainer1.TabIndex = 2;
+            this.splitContainer1.TabIndex = 0;
             // 
             // button2
             // 
             this.button2.Location = new System.Drawing.Point(40, 11);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(89, 23);
+            this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 5;
-            this.button2.Text = "新增销售出库";
+            this.button2.Text = "新  增";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
@@ -220,7 +154,7 @@
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(53, 12);
             this.label2.TabIndex = 2;
-            this.label2.Text = "出库时间";
+            this.label2.Text = "入库时间";
             // 
             // cbxGuoNong
             // 
@@ -253,15 +187,14 @@
             // 
             // splitContainer2.Panel2
             // 
-            this.splitContainer2.Panel2.Controls.Add(this.button3);
             this.splitContainer2.Panel2.Controls.Add(this.lblSumMoney);
             this.splitContainer2.Panel2.Controls.Add(this.lblSumNumber);
             this.splitContainer2.Panel2.Controls.Add(this.lblSumWeight);
             this.splitContainer2.Panel2.Controls.Add(this.label6);
             this.splitContainer2.Panel2.Controls.Add(this.label5);
             this.splitContainer2.Panel2.Controls.Add(this.label4);
-            this.splitContainer2.Size = new System.Drawing.Size(853, 549);
-            this.splitContainer2.SplitterDistance = 502;
+            this.splitContainer2.Size = new System.Drawing.Size(850, 513);
+            this.splitContainer2.SplitterDistance = 466;
             this.splitContainer2.TabIndex = 0;
             // 
             // dataGridView1
@@ -295,7 +228,7 @@
             this.dataGridView1.RowHeadersVisible = false;
             this.dataGridView1.RowTemplate.Height = 23;
             this.dataGridView1.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dataGridView1.Size = new System.Drawing.Size(853, 502);
+            this.dataGridView1.Size = new System.Drawing.Size(850, 466);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dataGridView1_CellFormatting);
             // 
@@ -384,7 +317,7 @@
             // lblSumMoney
             // 
             this.lblSumMoney.AutoSize = true;
-            this.lblSumMoney.Location = new System.Drawing.Point(651, 13);
+            this.lblSumMoney.Location = new System.Drawing.Point(706, 13);
             this.lblSumMoney.Name = "lblSumMoney";
             this.lblSumMoney.Size = new System.Drawing.Size(11, 12);
             this.lblSumMoney.TabIndex = 1;
@@ -393,7 +326,7 @@
             // lblSumNumber
             // 
             this.lblSumNumber.AutoSize = true;
-            this.lblSumNumber.Location = new System.Drawing.Point(532, 13);
+            this.lblSumNumber.Location = new System.Drawing.Point(587, 13);
             this.lblSumNumber.Name = "lblSumNumber";
             this.lblSumNumber.Size = new System.Drawing.Size(11, 12);
             this.lblSumNumber.TabIndex = 1;
@@ -402,7 +335,7 @@
             // lblSumWeight
             // 
             this.lblSumWeight.AutoSize = true;
-            this.lblSumWeight.Location = new System.Drawing.Point(413, 13);
+            this.lblSumWeight.Location = new System.Drawing.Point(468, 13);
             this.lblSumWeight.Name = "lblSumWeight";
             this.lblSumWeight.Size = new System.Drawing.Size(11, 12);
             this.lblSumWeight.TabIndex = 1;
@@ -411,7 +344,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(593, 13);
+            this.label6.Location = new System.Drawing.Point(648, 13);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(53, 12);
             this.label6.TabIndex = 0;
@@ -420,7 +353,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(478, 13);
+            this.label5.Location = new System.Drawing.Point(533, 13);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(53, 12);
             this.label5.TabIndex = 0;
@@ -429,37 +362,25 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(366, 13);
+            this.label4.Location = new System.Drawing.Point(421, 13);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(53, 12);
             this.label4.TabIndex = 0;
             this.label4.Text = "总重量：";
             // 
-            // button3
-            // 
-            this.button3.Location = new System.Drawing.Point(730, 8);
-            this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(75, 23);
-            this.button3.TabIndex = 2;
-            this.button3.Text = "打  印";
-            this.button3.UseVisualStyleBackColor = true;
-            // 
-            // Form1
+            // InStoreList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(853, 622);
+            this.ClientSize = new System.Drawing.Size(850, 561);
             this.Controls.Add(this.splitContainer1);
-            this.Controls.Add(this.menuStrip1);
-            this.MainMenuStrip = this.menuStrip1;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.MaximizeBox = false;
             this.MinimizeBox = false;
-            this.Name = "Form1";
+            this.Name = "InStoreList";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
-            this.Text = "冷库管理系统";
-            this.Load += new System.EventHandler(this.Form1_Load);
-            this.menuStrip1.ResumeLayout(false);
-            this.menuStrip1.PerformLayout();
+            this.Text = "入库查询";
+            this.Load += new System.EventHandler(this.InStoreList_Load);
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel1.PerformLayout();
             this.splitContainer1.Panel2.ResumeLayout(false);
@@ -472,30 +393,26 @@
             this.splitContainer2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
 
-        private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem 规格管理ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 级别管理ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 果农管理ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 入库管理ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 新增入库ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 入库查询ToolStripMenuItem;
         private System.Windows.Forms.SplitContainer splitContainer1;
-        private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.SplitContainer splitContainer2;
+        private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.DataGridView dataGridView1;
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ComboBox cbxGuoNong;
-        private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.SplitContainer splitContainer2;
-        private System.Windows.Forms.DataGridView dataGridView1;
+        private System.Windows.Forms.DateTimePicker dateTimePicker2;
+        private System.Windows.Forms.Button button1;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label lblSumWeight;
+        private System.Windows.Forms.Label lblSumNumber;
+        private System.Windows.Forms.Label lblSumMoney;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private System.Windows.Forms.DataGridViewTextBoxColumn 入库时间;
         private System.Windows.Forms.DataGridViewTextBoxColumn 果农;
@@ -505,13 +422,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn 单价;
         private System.Windows.Forms.DataGridViewTextBoxColumn 数量;
         private System.Windows.Forms.DataGridViewTextBoxColumn 金额;
-        private System.Windows.Forms.Label lblSumMoney;
-        private System.Windows.Forms.Label lblSumNumber;
-        private System.Windows.Forms.Label lblSumWeight;
-        private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.Button button3;
+        private System.Windows.Forms.Label label6;
     }
 }
-

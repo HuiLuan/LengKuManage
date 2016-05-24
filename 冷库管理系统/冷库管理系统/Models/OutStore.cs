@@ -5,11 +5,7 @@ using System.Text;
 
 namespace 冷库管理系统.Models
 {
-    public class GuoNong: BaseInfo
+    public class OutStore : StoreBase
     {
-        public override string ToString()
-        {
-            return Name;
-        }
     }
 }
