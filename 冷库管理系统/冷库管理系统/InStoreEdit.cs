@@ -37,7 +37,7 @@ namespace 冷库管理系统
 
         private void AppToUi()
         {
-            using (var db=new AppContext())
+            var db = SigleAppContext.Instance();
             {
                 var inStore =
                     db.InStores.Include(x => x.GuiGe)
@@ -92,9 +92,9 @@ namespace 冷库管理系统
                 MessageBox.Show("数量不能为空");
                 return;
             }
-       
 
-            using (var db=new AppContext())
+
+            var db = SigleAppContext.Instance();
             {
                 InStore instore;
                 if (mId > 0)
@@ -115,8 +115,14 @@ namespace 冷库管理系统
                 {
                     instore.Price = Convert.ToDecimal(txtPrice.Text);
                 }
+
                 instore.Number = Convert.ToInt32(txtNumber.Text);
-                instore.Money = Convert.ToDecimal(txtMoney.Text);
+
+                if (!string.IsNullOrWhiteSpace(txtPrice.Text))
+                {
+                    instore.Money = Convert.ToDecimal(txtMoney.Text);
+                }
+                
 
                 if (mId <= 0)
                 {
@@ -137,6 +143,10 @@ namespace 冷库管理系统
                 decimal price = decimal.Parse(txtPrice.Text.Trim());
                 var money = weight*price;
                 txtMoney.Text = Math.Round(money, 2).ToString();
+            }
+            else
+            {
+                txtMoney.Text = "0";
             }
         }
 

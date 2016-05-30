@@ -28,7 +28,7 @@ namespace 冷库管理系统
         private void button1_Click(object sender, EventArgs e)
         {
 
-            using (var db = new AppContext())
+            var db = SigleAppContext.Instance();
             {
                 if (mId > 0)
                 {
@@ -58,7 +58,7 @@ namespace 冷库管理系统
         {
             if (mId > 0)
             {
-                using (var db = new AppContext())
+                var db = SigleAppContext.Instance();
                 {
                     var gn = db.GuoNongs.Find(mId);
                     textBox1.Text = gn.Name;

@@ -42,7 +42,7 @@ namespace 冷库管理系统
                 return;
             }
 
-            using (var db = new AppContext())
+            var db = SigleAppContext.Instance();
             {
                 OutStore outstore;
                 if (mId > 0)
@@ -85,6 +85,10 @@ namespace 冷库管理系统
                 var money = weight * price;
                 txtMoney.Text = Math.Round(money, 2).ToString();
             }
+            else
+            {
+                txtMoney.Text = "0";
+            }
         }
         private void OutStoreEdit_Load(object sender, EventArgs e)
         {
@@ -96,7 +100,7 @@ namespace 冷库管理系统
         }
         private void AppToUi()
         {
-            using (var db = new AppContext())
+            var db = SigleAppContext.Instance();
             {
                 var outstore =
                     db.OutStores.Include(x => x.GuiGe)

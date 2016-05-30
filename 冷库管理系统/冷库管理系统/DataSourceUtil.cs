@@ -11,7 +11,7 @@ namespace 冷库管理系统
     {
         public static void GuoNong(ComboBox box, bool hasEmptyTop)
         {
-            using (var db = new AppContext())
+            var db = SigleAppContext.Instance();
             {
                 var list = new List<GuoNong>();
                 if (hasEmptyTop)
@@ -26,7 +26,7 @@ namespace 冷库管理系统
         }
         public static void GuiGe(ComboBox box, bool hasEmptyTop)
         {
-            using (var db = new AppContext())
+            var db = SigleAppContext.Instance();
             {
                 var list = new List<GuiGe>();
                 if (hasEmptyTop)
@@ -41,7 +41,7 @@ namespace 冷库管理系统
         }
         public static void JiBie(ComboBox box, bool hasEmptyTop)
         {
-            using (var db = new AppContext())
+            var db = SigleAppContext.Instance();
             {
                 var list = new List<JiBie>();
                 if (hasEmptyTop)

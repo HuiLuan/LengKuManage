@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
@@ -63,6 +64,8 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.删除选中入库信息ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -72,6 +75,7 @@
             this.splitContainer2.Panel2.SuspendLayout();
             this.splitContainer2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            this.contextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // splitContainer1
@@ -231,6 +235,7 @@
             this.dataGridView1.Size = new System.Drawing.Size(850, 466);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dataGridView1_CellFormatting);
+            this.dataGridView1.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_CellMouseDoubleClick);
             // 
             // ID
             // 
@@ -368,6 +373,20 @@
             this.label4.TabIndex = 0;
             this.label4.Text = "总重量：";
             // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.删除选中入库信息ToolStripMenuItem});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(173, 26);
+            // 
+            // 删除选中入库信息ToolStripMenuItem
+            // 
+            this.删除选中入库信息ToolStripMenuItem.Name = "删除选中入库信息ToolStripMenuItem";
+            this.删除选中入库信息ToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
+            this.删除选中入库信息ToolStripMenuItem.Text = "删除选中入库信息";
+            this.删除选中入库信息ToolStripMenuItem.Click += new System.EventHandler(this.删除选中入库信息ToolStripMenuItem_Click);
+            // 
             // InStoreList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
@@ -392,6 +411,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).EndInit();
             this.splitContainer2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            this.contextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -424,5 +444,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn 金额;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem 删除选中入库信息ToolStripMenuItem;
     }
 }

@@ -61,7 +61,7 @@ namespace 冷库管理系统
         }
         private void BindGridView()
         {
-            using (var db = new AppContext())
+            var db = SigleAppContext.Instance();
             {
                 var list = db.OutStores.Include(x => x.GuoNong).Include(x => x.JiBie).Include(x => x.GuiGe);
                 var gnid = Convert.ToInt32(cbxGuoNong.SelectedValue);
@@ -108,6 +108,41 @@ namespace 冷库管理系统
                 object originalValue = e.Value;
                 e.Value = Convert.ToDateTime(originalValue).ToString("yyyy年MM月dd日");
             }
+        }
+
+        private void dataGridView1_CellMouseDoubleClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+            var id = dataGridView1.Rows[e.RowIndex].Cells[0].Value;
+            var f = new OutStoreEdit();
+            f.Init(Convert.ToInt64(id));
+            if (f.ShowDialog() == DialogResult.OK)
+            {
+                BindGridView();
+            }
+        }
+
+        private void 删除选中出库信息ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            if (MessageBox.Show("确定删除选中行吗？", "删除", MessageBoxButtons.OKCancel) == DialogResult.OK)
+            {
+                if (dataGridView1.SelectedRows.Count < 1)
+                {
+                    return;
+                }
+                var id = dataGridView1.SelectedRows[0].Cells[0].Value;
+                var db = SigleAppContext.Instance();
+                {
+                    var dmo = db.OutStores.Find(id);
+                    db.OutStores.Remove(dmo);
+                    db.SaveChanges();
+                }
+                BindGridView();
+            }
+        }
+
+        private void Form1_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            SigleAppContext.Instance().Dispose();
         }
     }
 }

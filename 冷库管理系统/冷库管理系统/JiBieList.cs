@@ -29,7 +29,7 @@ namespace 冷库管理系统
         }
         private void BindGridView()
         {
-            using (var db = new AppContext())
+            var db = SigleAppContext.Instance();
             {
                 dataGridView1.DataSource = db.JiBies.OrderByDescending(x => x.Name).ToList();
             }
@@ -57,7 +57,7 @@ namespace 冷库管理系统
                     return;
                 }
                 var id = dataGridView1.SelectedRows[0].Cells[0].Value;
-                using (var db = new AppContext())
+                var db = SigleAppContext.Instance();
                 {
                     var dmo = db.JiBies.Find(id);
                     db.JiBies.Remove(dmo);
