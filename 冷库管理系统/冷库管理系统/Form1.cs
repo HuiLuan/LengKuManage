@@ -86,6 +86,31 @@ namespace 冷库管理系统
                 lblSumWeight.Text = dataList.Sum(x => x.Weight ?? 0).ToString();
                 lblSumNumber.Text = dataList.Sum(x => x.Number ?? 0).ToString();
                 lblSumMoney.Text = dataList.Sum(x => x.Money ?? 0).ToString();
+                lblLengCangFei.Text = dataList.Sum(x => x.LengCangFei ?? 0).ToString();
+
+                decimal shijiMoney = dataList.Sum(x => x.ShiJiMoney ?? 0);
+                lblSumShiJiMoney.Text = shijiMoney.ToString();
+
+                var zhiqians = db.ZhiQians.AsQueryable();
+                if (cbxGuoNong.SelectedIndex > 0)
+                {
+                    zhiqians = zhiqians.Where(x => x.GuoNongId == gnid);
+                }
+                if (dateTimePicker1.Checked)
+                {
+                    zhiqians = zhiqians.Where(x => x.BillDate >= mindate);
+                }
+                if (dateTimePicker2.Checked)
+                {
+                    zhiqians = zhiqians.Where(x => x.BillDate <= maxdate);
+                }
+                var zhiQianList = zhiqians.ToList();
+
+                var zhiQianMoney = zhiQianList.Sum(x => x.Money);
+                lblZhiQuMoney.Text = zhiQianMoney.ToString();
+
+                var lastPayMoeny = shijiMoney - zhiQianMoney;
+                lblLastPayMoney.Text = lastPayMoeny.ToString();
             }
         }
 
@@ -143,6 +168,20 @@ namespace 冷库管理系统
         private void Form1_FormClosing(object sender, FormClosingEventArgs e)
         {
             SigleAppContext.Instance().Dispose();
+        }
+
+        private void 冷藏费ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var f=new SetLengCanfFeiForm();
+            if (f.ShowDialog() == DialogResult.OK)
+            {
+            }
+        }
+
+        private void 支钱管理ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            var f = new ZhiQianList();
+            f.Show();
         }
     }
 }

@@ -63,8 +63,18 @@ namespace 冷库管理系统
                 {
                     outstore.Price = Convert.ToDecimal(txtPrice.Text);
                 }
+                if (!string.IsNullOrWhiteSpace(txtLengCangFei.Text))
+                {
+                    outstore.LengCangFei = Convert.ToDecimal(txtLengCangFei.Text);
+                }
+                if (!string.IsNullOrWhiteSpace(txtShiJiMoney.Text))
+                {
+                    outstore.ShiJiMoney = Convert.ToDecimal(txtShiJiMoney.Text);
+                }
+
                 outstore.Number = Convert.ToInt32(txtNumber.Text);
                 outstore.Money = Convert.ToDecimal(txtMoney.Text);
+
 
                 if (mId <= 0)
                 {
@@ -89,7 +99,15 @@ namespace 冷库管理系统
             {
                 txtMoney.Text = "0";
             }
+
+            decimal lengcang = 0;
+            if (decimal.TryParse(txtLengCangFei.Text, out lengcang))
+            {
+
+            }
+            txtShiJiMoney.Text = (Convert.ToDecimal(txtMoney.Text) - lengcang).ToString();
         }
+       
         private void OutStoreEdit_Load(object sender, EventArgs e)
         {
             InitDataSource();
@@ -167,6 +185,21 @@ namespace 冷库管理系统
             {
                 e.Handled = true;
             }
+        }
+
+        private void txtNumber_TextChanged(object sender, EventArgs e)
+        {
+            var fei =
+                SigleAppContext.Instance().GlobalSets.FirstOrDefault(x => x.GlobalSetType == GlobalSetType.LengCangFei);
+            if (fei != null)
+            {
+                txtLengCangFei.Text = (fei.DecimalValue*Convert.ToInt32(txtNumber.Text)).ToString();
+            }
+            else
+            {
+                txtLengCangFei.Text = "0";
+            }
+            SetMoney();
         }
     }
 }

@@ -48,6 +48,10 @@
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.label1 = new System.Windows.Forms.Label();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label10 = new System.Windows.Forms.Label();
+            this.txtLengCangFei = new System.Windows.Forms.TextBox();
+            this.txtShiJiMoney = new System.Windows.Forms.TextBox();
             this.tableLayoutPanel1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -55,7 +59,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(295, 323);
+            this.button1.Location = new System.Drawing.Point(374, 332);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(81, 37);
             this.button1.TabIndex = 9;
@@ -69,7 +73,7 @@
             this.label3.AutoSize = true;
             this.label3.Location = new System.Drawing.Point(4, 16);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(101, 12);
+            this.label3.Size = new System.Drawing.Size(99, 12);
             this.label3.TabIndex = 0;
             this.label3.Text = "规格（#）";
             this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -78,9 +82,9 @@
             // 
             this.label4.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(112, 16);
+            this.label4.Location = new System.Drawing.Point(110, 16);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(101, 12);
+            this.label4.Size = new System.Drawing.Size(99, 12);
             this.label4.TabIndex = 0;
             this.label4.Text = "级别";
             this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -88,13 +92,15 @@
             // tableLayoutPanel1
             // 
             this.tableLayoutPanel1.CellBorderStyle = System.Windows.Forms.TableLayoutPanelCellBorderStyle.Single;
-            this.tableLayoutPanel1.ColumnCount = 6;
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 16.66667F));
+            this.tableLayoutPanel1.ColumnCount = 8;
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 12.5F));
             this.tableLayoutPanel1.Controls.Add(this.label3, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.label4, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.label5, 2, 0);
@@ -107,21 +113,25 @@
             this.tableLayoutPanel1.Controls.Add(this.txtPrice, 3, 1);
             this.tableLayoutPanel1.Controls.Add(this.txtNumber, 4, 1);
             this.tableLayoutPanel1.Controls.Add(this.txtMoney, 5, 1);
+            this.tableLayoutPanel1.Controls.Add(this.label9, 6, 0);
+            this.tableLayoutPanel1.Controls.Add(this.label10, 7, 0);
+            this.tableLayoutPanel1.Controls.Add(this.txtLengCangFei, 6, 1);
+            this.tableLayoutPanel1.Controls.Add(this.txtShiJiMoney, 7, 1);
             this.tableLayoutPanel1.Location = new System.Drawing.Point(5, 29);
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 2;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(654, 90);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(849, 90);
             this.tableLayoutPanel1.TabIndex = 2;
             // 
             // label5
             // 
             this.label5.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(220, 16);
+            this.label5.Location = new System.Drawing.Point(216, 16);
             this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(101, 12);
+            this.label5.Size = new System.Drawing.Size(99, 12);
             this.label5.TabIndex = 0;
             this.label5.Text = "重量（公斤）";
             this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -130,9 +140,9 @@
             // 
             this.label6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(328, 16);
+            this.label6.Location = new System.Drawing.Point(322, 16);
             this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(101, 12);
+            this.label6.Size = new System.Drawing.Size(99, 12);
             this.label6.TabIndex = 0;
             this.label6.Text = "单价（元/公斤）";
             this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -141,9 +151,9 @@
             // 
             this.label7.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(436, 16);
+            this.label7.Location = new System.Drawing.Point(428, 16);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(101, 12);
+            this.label7.Size = new System.Drawing.Size(99, 12);
             this.label7.TabIndex = 0;
             this.label7.Text = "数量（桶）";
             this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -152,9 +162,9 @@
             // 
             this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(544, 16);
+            this.label8.Location = new System.Drawing.Point(534, 16);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(106, 12);
+            this.label8.Size = new System.Drawing.Size(99, 12);
             this.label8.TabIndex = 0;
             this.label8.Text = "金额（元）";
             this.label8.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
@@ -166,7 +176,7 @@
             this.cbxGuiGe.FormattingEnabled = true;
             this.cbxGuiGe.Location = new System.Drawing.Point(4, 57);
             this.cbxGuiGe.Name = "cbxGuiGe";
-            this.cbxGuiGe.Size = new System.Drawing.Size(101, 20);
+            this.cbxGuiGe.Size = new System.Drawing.Size(99, 20);
             this.cbxGuiGe.TabIndex = 1;
             // 
             // cbxJiBie
@@ -174,17 +184,17 @@
             this.cbxJiBie.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.cbxJiBie.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbxJiBie.FormattingEnabled = true;
-            this.cbxJiBie.Location = new System.Drawing.Point(112, 57);
+            this.cbxJiBie.Location = new System.Drawing.Point(110, 57);
             this.cbxJiBie.Name = "cbxJiBie";
-            this.cbxJiBie.Size = new System.Drawing.Size(101, 20);
+            this.cbxJiBie.Size = new System.Drawing.Size(99, 20);
             this.cbxJiBie.TabIndex = 1;
             // 
             // txtWeight
             // 
             this.txtWeight.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtWeight.Location = new System.Drawing.Point(220, 56);
+            this.txtWeight.Location = new System.Drawing.Point(216, 56);
             this.txtWeight.Name = "txtWeight";
-            this.txtWeight.Size = new System.Drawing.Size(101, 21);
+            this.txtWeight.Size = new System.Drawing.Size(99, 21);
             this.txtWeight.TabIndex = 2;
             this.txtWeight.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtWeight.TextChanged += new System.EventHandler(this.txtWeight_TextChanged);
@@ -193,9 +203,9 @@
             // txtPrice
             // 
             this.txtPrice.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtPrice.Location = new System.Drawing.Point(328, 56);
+            this.txtPrice.Location = new System.Drawing.Point(322, 56);
             this.txtPrice.Name = "txtPrice";
-            this.txtPrice.Size = new System.Drawing.Size(101, 21);
+            this.txtPrice.Size = new System.Drawing.Size(99, 21);
             this.txtPrice.TabIndex = 2;
             this.txtPrice.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             this.txtPrice.TextChanged += new System.EventHandler(this.txtPrice_TextChanged);
@@ -204,20 +214,21 @@
             // txtNumber
             // 
             this.txtNumber.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.txtNumber.Location = new System.Drawing.Point(436, 56);
+            this.txtNumber.Location = new System.Drawing.Point(428, 56);
             this.txtNumber.Name = "txtNumber";
-            this.txtNumber.Size = new System.Drawing.Size(101, 21);
+            this.txtNumber.Size = new System.Drawing.Size(99, 21);
             this.txtNumber.TabIndex = 2;
             this.txtNumber.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            this.txtNumber.TextChanged += new System.EventHandler(this.txtNumber_TextChanged);
             this.txtNumber.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNumber_KeyPress);
             // 
             // txtMoney
             // 
             this.txtMoney.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.txtMoney.Enabled = false;
-            this.txtMoney.Location = new System.Drawing.Point(544, 56);
+            this.txtMoney.Location = new System.Drawing.Point(534, 56);
             this.txtMoney.Name = "txtMoney";
-            this.txtMoney.Size = new System.Drawing.Size(106, 21);
+            this.txtMoney.Size = new System.Drawing.Size(99, 21);
             this.txtMoney.TabIndex = 2;
             this.txtMoney.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
             // 
@@ -226,7 +237,7 @@
             this.groupBox2.Controls.Add(this.tableLayoutPanel1);
             this.groupBox2.Location = new System.Drawing.Point(15, 122);
             this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(665, 167);
+            this.groupBox2.Size = new System.Drawing.Size(876, 167);
             this.groupBox2.TabIndex = 8;
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "苹果信息";
@@ -263,7 +274,7 @@
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Location = new System.Drawing.Point(15, 20);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(665, 72);
+            this.groupBox1.Size = new System.Drawing.Size(876, 72);
             this.groupBox1.TabIndex = 7;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "基本信息";
@@ -277,11 +288,53 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "果农";
             // 
+            // label9
+            // 
+            this.label9.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(640, 16);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(99, 12);
+            this.label9.TabIndex = 0;
+            this.label9.Text = "冷藏费（元）";
+            this.label9.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // label10
+            // 
+            this.label10.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.label10.AutoSize = true;
+            this.label10.Location = new System.Drawing.Point(746, 16);
+            this.label10.Name = "label10";
+            this.label10.Size = new System.Drawing.Size(99, 12);
+            this.label10.TabIndex = 0;
+            this.label10.Text = "实际金额（元）";
+            this.label10.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            // 
+            // txtLengCangFei
+            // 
+            this.txtLengCangFei.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtLengCangFei.Enabled = false;
+            this.txtLengCangFei.Location = new System.Drawing.Point(640, 56);
+            this.txtLengCangFei.Name = "txtLengCangFei";
+            this.txtLengCangFei.Size = new System.Drawing.Size(99, 21);
+            this.txtLengCangFei.TabIndex = 2;
+            this.txtLengCangFei.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
+            // txtShiJiMoney
+            // 
+            this.txtShiJiMoney.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
+            this.txtShiJiMoney.Enabled = false;
+            this.txtShiJiMoney.Location = new System.Drawing.Point(746, 56);
+            this.txtShiJiMoney.Name = "txtShiJiMoney";
+            this.txtShiJiMoney.Size = new System.Drawing.Size(99, 21);
+            this.txtShiJiMoney.TabIndex = 2;
+            this.txtShiJiMoney.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
+            // 
             // OutStoreEdit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(694, 381);
+            this.ClientSize = new System.Drawing.Size(903, 381);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.groupBox2);
             this.Controls.Add(this.groupBox1);
@@ -323,5 +376,9 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label9;
+        private System.Windows.Forms.Label label10;
+        private System.Windows.Forms.TextBox txtLengCangFei;
+        private System.Windows.Forms.TextBox txtShiJiMoney;
     }
 }

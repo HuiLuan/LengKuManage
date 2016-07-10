@@ -32,6 +32,6 @@ namespace 冷库管理系统.Models
 
         //金额（元）  =重量*价格
         public decimal? Money { get; set; }
-
+      
     }
 }

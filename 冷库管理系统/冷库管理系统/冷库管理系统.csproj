@@ -121,12 +121,14 @@
     </Compile>
     <Compile Include="Models\BaseInfo.cs" />
     <Compile Include="Models\DbBase.cs" />
+    <Compile Include="Models\GlobalSet.cs" />
     <Compile Include="Models\GuiGe.cs" />
     <Compile Include="Models\GuoNong.cs" />
     <Compile Include="Models\InStore.cs" />
     <Compile Include="Models\JiBie.cs" />
     <Compile Include="Models\OutStore.cs" />
     <Compile Include="Models\StoreBase.cs" />
+    <Compile Include="Models\ZhiQian.cs" />
     <Compile Include="OutStoreEdit.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -135,10 +137,28 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="SetLengCanfFeiForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="SetLengCanfFeiForm.Designer.cs">
+      <DependentUpon>SetLengCanfFeiForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="SigleAppContext.cs" />
     <Compile Include="Utils\PinYinUtil\HHPinYin.cs" />
     <Compile Include="Utils\PinYinUtil\PyCode.cs" />
     <Compile Include="Utils\PinYinUtil\PyHash.cs" />
+    <Compile Include="ZhiQianEdit.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ZhiQianEdit.Designer.cs">
+      <DependentUpon>ZhiQianEdit.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ZhiQianList.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ZhiQianList.Designer.cs">
+      <DependentUpon>ZhiQianList.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
@@ -178,6 +198,15 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="SetLengCanfFeiForm.resx">
+      <DependentUpon>SetLengCanfFeiForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ZhiQianEdit.resx">
+      <DependentUpon>ZhiQianEdit.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ZhiQianList.resx">
+      <DependentUpon>ZhiQianList.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="App.config" />
     <None Include="bin\Debug\LengKu.db3" />
     <None Include="bin\Debug\冷库管理系统.exe.config" />
