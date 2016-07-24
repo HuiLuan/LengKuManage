@@ -183,5 +183,15 @@ namespace 冷库管理系统
             var f = new ZhiQianList();
             f.Show();
         }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            if (dataGridView1.Rows.Count < 1)
+            {
+                MessageBox.Show("没有数据可打印");
+                return;
+            }
+            PrintDGV.Print_DataGridView(this.dataGridView1);
+        }
     }
 }
