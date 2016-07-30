@@ -36,6 +36,13 @@ namespace 冷库管理系统
         private static bool FitToPageWidth = true; // True = Fits selected columns to page width ,  False = Print columns as showed    
         private static int HeaderHeight = 0;
 
+        private static string mFootStr = "";
+
+        public static void InitFootStr(string footstr)
+        {
+            mFootStr = footstr;
+        }
+
         public static void Print_DataGridView(DataGridView dgv1)
         {
             PrintPreviewDialog ppvw;
@@ -199,7 +206,7 @@ namespace 冷库管理系统
 
                     if (tmpTop + CellHeight >= e.MarginBounds.Height + e.MarginBounds.Top)
                     {
-                        //DrawFooter(e, RowsPerPage);
+                        DrawFooter(e, RowsPerPage);
                         NewPage = true;
                         PageNo++;
                         e.HasMorePages = true;
@@ -270,7 +277,7 @@ namespace 冷库管理系统
                             if (((Type)ColumnTypes[i]).Name == "DataGridViewTextBoxColumn" ||
                                 ((Type)ColumnTypes[i]).Name == "DataGridViewLinkColumn")
                             {
-                                var cellValue = Cel.Value.ToString();
+                                var cellValue = ObjToString(Cel.Value);
                                 if (Cel.OwningColumn.HeaderText == "出库时间")
                                 {
                                     cellValue = Convert.ToDateTime(Cel.Value).ToString("yyyy-MM-dd");
@@ -285,7 +292,7 @@ namespace 冷库管理系统
                             // For the Button Column
                             else if (((Type)ColumnTypes[i]).Name == "DataGridViewButtonColumn")
                             {
-                                CellButton.Text = Cel.Value.ToString();
+                                CellButton.Text = ObjToString(Cel.Value);
                                 CellButton.Size = new Size((int)ColumnWidths[i], CellHeight);
                                 Bitmap bmp = new Bitmap(CellButton.Width, CellButton.Height);
                                 CellButton.DrawToBitmap(bmp, new Rectangle(0, 0,
@@ -315,7 +322,7 @@ namespace 冷库管理系统
                                 CellComboBox.DrawToBitmap(bmp, new Rectangle(0, 0,
                                         bmp.Width, bmp.Height));
                                 e.Graphics.DrawImage(bmp, new Point((int)ColumnLefts[i], tmpTop));
-                                e.Graphics.DrawString(Cel.Value.ToString(), Cel.InheritedStyle.Font,
+                                e.Graphics.DrawString(ObjToString(Cel.Value), Cel.InheritedStyle.Font,
                                         new SolidBrush(Cel.InheritedStyle.ForeColor),
                                         new RectangleF((int)ColumnLefts[i] + 1, tmpTop, (int)ColumnWidths[i]
                                         - 16, CellHeight), StrFormatComboBox);
@@ -351,7 +358,7 @@ namespace 冷库管理系统
                 if (RowsPerPage == 0) return;
 
                 // Write Footer (Page Number)
-                //DrawFooter(e, RowsPerPage);
+                DrawFooter(e, RowsPerPage);
 
                 e.HasMorePages = false;
             }
@@ -359,6 +366,16 @@ namespace 冷库管理系统
             {
                 MessageBox.Show(ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
+        }
+
+
+        private static string ObjToString(object obj)
+        {
+            if (obj == null)
+            {
+                return "";
+            }
+            return obj.ToString();
         }
 
         private static void DrawFooter(System.Drawing.Printing.PrintPageEventArgs e,
@@ -378,15 +395,25 @@ namespace 冷库管理系统
                 cnt = dgv.SelectedRows.Count;
 
             // Writing the Page Number on the Bottom of Page
-            string PageNum = " 第 " + PageNo.ToString()
-                           + " 页，共 " + Math.Ceiling((double)(cnt / RowsPerPage)).ToString()
-                           + " 页";
+//            string PageNum = " 第 " + PageNo.ToString()
+//                           + " 页，共 " + Math.Ceiling((double)(cnt / RowsPerPage)).ToString()
+//                           + " 页";
+//            e.Graphics.DrawString(PageNum, dgv.Font, Brushes.Black,
+//       e.MarginBounds.Left + (e.MarginBounds.Width -
+//       e.Graphics.MeasureString(PageNum, dgv.Font,
+//       e.MarginBounds.Width).Width) / 2, e.MarginBounds.Top +
+//       e.MarginBounds.Height + 31);
 
-            e.Graphics.DrawString(PageNum, dgv.Font, Brushes.Black,
-                e.MarginBounds.Left + (e.MarginBounds.Width -
-                e.Graphics.MeasureString(PageNum, dgv.Font,
-                e.MarginBounds.Width).Width) / 2, e.MarginBounds.Top +
-                e.MarginBounds.Height + 31);
+            if (PageNo ==Convert.ToInt32( Math.Ceiling((cnt/RowsPerPage))))
+            {
+                e.Graphics.DrawString(mFootStr, dgv.Font, Brushes.Black,
+               e.MarginBounds.Left + (e.MarginBounds.Width -
+               e.Graphics.MeasureString(mFootStr, dgv.Font,
+               e.MarginBounds.Width).Width) / 2, e.MarginBounds.Top +
+               e.MarginBounds.Height + 31);
+            }
+
+   
         }
     }
 }

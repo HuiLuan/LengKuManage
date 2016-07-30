@@ -191,6 +191,10 @@ namespace 冷库管理系统
                 MessageBox.Show("没有数据可打印");
                 return;
             }
+            string footstr = String.Format("总重量:{0} 总数量:{1} 总金额:{2} 冷藏费:{3} 实际金额:{4} 支取金额:{5} 支付金额:{6}",
+                lblSumWeight.Text, lblSumNumber.Text, lblSumMoney.Text, lblLengCangFei.Text, lblSumShiJiMoney.Text,
+                lblZhiQuMoney.Text, lblZhiQuMoney.Text); 
+            PrintDGV.InitFootStr(footstr);
             PrintDGV.Print_DataGridView(this.dataGridView1);
         }
     }
