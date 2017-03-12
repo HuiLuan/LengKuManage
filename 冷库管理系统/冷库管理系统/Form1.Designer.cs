@@ -59,6 +59,17 @@
             this.label1 = new System.Windows.Forms.Label();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.出库时间 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.果农 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.规格 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.级别 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.重量 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.单价 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.数量 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.金额 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.冷藏费 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.实际金额 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.删除选中出库信息ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.button3 = new System.Windows.Forms.Button();
@@ -76,17 +87,8 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.出库时间 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.果农 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.规格 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.级别 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.重量 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.单价 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.数量 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.金额 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.冷藏费 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.实际金额 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.label9 = new System.Windows.Forms.Label();
+            this.txtGuoNong = new System.Windows.Forms.TextBox();
             this.menuStrip1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
@@ -191,6 +193,7 @@
             // 
             // splitContainer1.Panel1
             // 
+            this.splitContainer1.Panel1.Controls.Add(this.txtGuoNong);
             this.splitContainer1.Panel1.Controls.Add(this.button2);
             this.splitContainer1.Panel1.Controls.Add(this.button1);
             this.splitContainer1.Panel1.Controls.Add(this.dateTimePicker2);
@@ -198,6 +201,7 @@
             this.splitContainer1.Panel1.Controls.Add(this.label3);
             this.splitContainer1.Panel1.Controls.Add(this.label2);
             this.splitContainer1.Panel1.Controls.Add(this.cbxGuoNong);
+            this.splitContainer1.Panel1.Controls.Add(this.label9);
             this.splitContainer1.Panel1.Controls.Add(this.label1);
             // 
             // splitContainer1.Panel2
@@ -209,7 +213,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(40, 11);
+            this.button2.Location = new System.Drawing.Point(3, 12);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(89, 23);
             this.button2.TabIndex = 5;
@@ -219,7 +223,7 @@
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(730, 10);
+            this.button1.Location = new System.Drawing.Point(789, 12);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 4;
@@ -230,7 +234,7 @@
             // dateTimePicker2
             // 
             this.dateTimePicker2.Checked = false;
-            this.dateTimePicker2.Location = new System.Drawing.Point(568, 10);
+            this.dateTimePicker2.Location = new System.Drawing.Point(627, 12);
             this.dateTimePicker2.Name = "dateTimePicker2";
             this.dateTimePicker2.ShowCheckBox = true;
             this.dateTimePicker2.Size = new System.Drawing.Size(126, 21);
@@ -239,7 +243,7 @@
             // dateTimePicker1
             // 
             this.dateTimePicker1.Checked = false;
-            this.dateTimePicker1.Location = new System.Drawing.Point(423, 10);
+            this.dateTimePicker1.Location = new System.Drawing.Point(482, 12);
             this.dateTimePicker1.Name = "dateTimePicker1";
             this.dateTimePicker1.ShowCheckBox = true;
             this.dateTimePicker1.Size = new System.Drawing.Size(126, 21);
@@ -248,7 +252,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(551, 14);
+            this.label3.Location = new System.Drawing.Point(610, 16);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(17, 12);
             this.label3.TabIndex = 2;
@@ -257,7 +261,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(364, 15);
+            this.label2.Location = new System.Drawing.Point(423, 17);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(53, 12);
             this.label2.TabIndex = 2;
@@ -266,7 +270,7 @@
             // cbxGuoNong
             // 
             this.cbxGuoNong.FormattingEnabled = true;
-            this.cbxGuoNong.Location = new System.Drawing.Point(243, 12);
+            this.cbxGuoNong.Location = new System.Drawing.Point(139, 14);
             this.cbxGuoNong.Name = "cbxGuoNong";
             this.cbxGuoNong.Size = new System.Drawing.Size(103, 20);
             this.cbxGuoNong.TabIndex = 1;
@@ -274,7 +278,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(208, 15);
+            this.label1.Location = new System.Drawing.Point(104, 17);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(29, 12);
             this.label1.TabIndex = 0;
@@ -351,6 +355,104 @@
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dataGridView1_CellFormatting);
             this.dataGridView1.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_CellMouseDoubleClick);
+            // 
+            // ID
+            // 
+            this.ID.DataPropertyName = "Id";
+            this.ID.HeaderText = "ID";
+            this.ID.Name = "ID";
+            this.ID.ReadOnly = true;
+            this.ID.Visible = false;
+            // 
+            // 出库时间
+            // 
+            this.出库时间.DataPropertyName = "BillDate";
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.出库时间.DefaultCellStyle = dataGridViewCellStyle2;
+            this.出库时间.HeaderText = "出库时间";
+            this.出库时间.Name = "出库时间";
+            this.出库时间.ReadOnly = true;
+            // 
+            // 果农
+            // 
+            this.果农.DataPropertyName = "GuoNong";
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.果农.DefaultCellStyle = dataGridViewCellStyle3;
+            this.果农.HeaderText = "果农";
+            this.果农.Name = "果农";
+            this.果农.ReadOnly = true;
+            // 
+            // 规格
+            // 
+            this.规格.DataPropertyName = "GuiGe";
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.规格.DefaultCellStyle = dataGridViewCellStyle4;
+            this.规格.HeaderText = "规格";
+            this.规格.Name = "规格";
+            this.规格.ReadOnly = true;
+            this.规格.Width = 80;
+            // 
+            // 级别
+            // 
+            this.级别.DataPropertyName = "JiBie";
+            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.级别.DefaultCellStyle = dataGridViewCellStyle5;
+            this.级别.HeaderText = "级别";
+            this.级别.Name = "级别";
+            this.级别.ReadOnly = true;
+            this.级别.Width = 80;
+            // 
+            // 重量
+            // 
+            this.重量.DataPropertyName = "Weight";
+            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.重量.DefaultCellStyle = dataGridViewCellStyle6;
+            this.重量.HeaderText = "重量（公斤）";
+            this.重量.Name = "重量";
+            this.重量.ReadOnly = true;
+            this.重量.Width = 120;
+            // 
+            // 单价
+            // 
+            this.单价.DataPropertyName = "Price";
+            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.单价.DefaultCellStyle = dataGridViewCellStyle7;
+            this.单价.HeaderText = "单价（元/公斤）";
+            this.单价.Name = "单价";
+            this.单价.ReadOnly = true;
+            this.单价.Width = 120;
+            // 
+            // 数量
+            // 
+            this.数量.DataPropertyName = "Number";
+            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.数量.DefaultCellStyle = dataGridViewCellStyle8;
+            this.数量.HeaderText = "数量（桶）";
+            this.数量.Name = "数量";
+            this.数量.ReadOnly = true;
+            // 
+            // 金额
+            // 
+            this.金额.DataPropertyName = "Money";
+            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.金额.DefaultCellStyle = dataGridViewCellStyle9;
+            this.金额.HeaderText = "金额（元）";
+            this.金额.Name = "金额";
+            this.金额.ReadOnly = true;
+            // 
+            // 冷藏费
+            // 
+            this.冷藏费.DataPropertyName = "LengCangFei";
+            this.冷藏费.HeaderText = "冷藏费";
+            this.冷藏费.Name = "冷藏费";
+            this.冷藏费.ReadOnly = true;
+            // 
+            // 实际金额
+            // 
+            this.实际金额.DataPropertyName = "ShiJiMoney";
+            this.实际金额.HeaderText = "实际金额";
+            this.实际金额.Name = "实际金额";
+            this.实际金额.ReadOnly = true;
             // 
             // contextMenuStrip1
             // 
@@ -502,103 +604,21 @@
             this.label4.TabIndex = 0;
             this.label4.Text = "总重量:";
             // 
-            // ID
+            // label9
             // 
-            this.ID.DataPropertyName = "Id";
-            this.ID.HeaderText = "ID";
-            this.ID.Name = "ID";
-            this.ID.ReadOnly = true;
-            this.ID.Visible = false;
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(255, 18);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(29, 12);
+            this.label9.TabIndex = 0;
+            this.label9.Text = "果农";
             // 
-            // 出库时间
+            // txtGuoNong
             // 
-            this.出库时间.DataPropertyName = "BillDate";
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.出库时间.DefaultCellStyle = dataGridViewCellStyle2;
-            this.出库时间.HeaderText = "出库时间";
-            this.出库时间.Name = "出库时间";
-            this.出库时间.ReadOnly = true;
-            // 
-            // 果农
-            // 
-            this.果农.DataPropertyName = "GuoNong";
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.果农.DefaultCellStyle = dataGridViewCellStyle3;
-            this.果农.HeaderText = "果农";
-            this.果农.Name = "果农";
-            this.果农.ReadOnly = true;
-            // 
-            // 规格
-            // 
-            this.规格.DataPropertyName = "GuiGe";
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.规格.DefaultCellStyle = dataGridViewCellStyle4;
-            this.规格.HeaderText = "规格";
-            this.规格.Name = "规格";
-            this.规格.ReadOnly = true;
-            this.规格.Width = 80;
-            // 
-            // 级别
-            // 
-            this.级别.DataPropertyName = "JiBie";
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.级别.DefaultCellStyle = dataGridViewCellStyle5;
-            this.级别.HeaderText = "级别";
-            this.级别.Name = "级别";
-            this.级别.ReadOnly = true;
-            this.级别.Width = 80;
-            // 
-            // 重量
-            // 
-            this.重量.DataPropertyName = "Weight";
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.重量.DefaultCellStyle = dataGridViewCellStyle6;
-            this.重量.HeaderText = "重量（公斤）";
-            this.重量.Name = "重量";
-            this.重量.ReadOnly = true;
-            this.重量.Width = 120;
-            // 
-            // 单价
-            // 
-            this.单价.DataPropertyName = "Price";
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.单价.DefaultCellStyle = dataGridViewCellStyle7;
-            this.单价.HeaderText = "单价（元/公斤）";
-            this.单价.Name = "单价";
-            this.单价.ReadOnly = true;
-            this.单价.Width = 120;
-            // 
-            // 数量
-            // 
-            this.数量.DataPropertyName = "Number";
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.数量.DefaultCellStyle = dataGridViewCellStyle8;
-            this.数量.HeaderText = "数量（桶）";
-            this.数量.Name = "数量";
-            this.数量.ReadOnly = true;
-            // 
-            // 金额
-            // 
-            this.金额.DataPropertyName = "Money";
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.金额.DefaultCellStyle = dataGridViewCellStyle9;
-            this.金额.HeaderText = "金额（元）";
-            this.金额.Name = "金额";
-            this.金额.ReadOnly = true;
-            // 
-            // 冷藏费
-            // 
-            this.冷藏费.DataPropertyName = "LengCangFei";
-            this.冷藏费.HeaderText = "冷藏费";
-            this.冷藏费.Name = "冷藏费";
-            this.冷藏费.ReadOnly = true;
-            // 
-            // 实际金额
-            // 
-            this.实际金额.DataPropertyName = "ShiJiMoney";
-            this.实际金额.HeaderText = "实际金额";
-            this.实际金额.Name = "实际金额";
-            this.实际金额.ReadOnly = true;
+            this.txtGuoNong.Location = new System.Drawing.Point(290, 14);
+            this.txtGuoNong.Name = "txtGuoNong";
+            this.txtGuoNong.Size = new System.Drawing.Size(100, 21);
+            this.txtGuoNong.TabIndex = 6;
             // 
             // Form1
             // 
@@ -685,6 +705,8 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn 金额;
         private System.Windows.Forms.DataGridViewTextBoxColumn 冷藏费;
         private System.Windows.Forms.DataGridViewTextBoxColumn 实际金额;
+        private System.Windows.Forms.TextBox txtGuoNong;
+        private System.Windows.Forms.Label label9;
     }
 }
 

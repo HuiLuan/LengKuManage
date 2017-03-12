@@ -46,6 +46,10 @@ namespace 冷库管理系统
                 {
                     list = list.Where(x => x.BillDate <= maxdate);
                 }
+                if (!string.IsNullOrWhiteSpace(txtGuoNong.Text))
+                {
+                    list = list.Where(x => x.GuoNong.Name.Contains(txtGuoNong.Text) );
+                }
                 var dataList = list.ToList();
                 dataGridView1.DataSource = dataList;
 
@@ -110,6 +114,20 @@ namespace 冷库管理系统
             {
                 BindGridView();
             }
+        }
+
+        private void button3_Click(object sender, EventArgs e)
+        {
+            if (dataGridView1.Rows.Count < 1)
+            {
+                MessageBox.Show("没有数据可打印");
+                return;
+            }
+
+            string footstr = String.Format("总重量:{0} 总数量:{1} 总金额:{2}",
+              lblSumWeight.Text, lblSumNumber.Text, lblSumMoney.Text);
+            PrintDGV.InitFootStr(footstr);
+            PrintDGV.Print_DataGridView(this.dataGridView1);
         }
     }
 }

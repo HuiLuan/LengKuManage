@@ -37,6 +37,11 @@
             this.lblSumMoney = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.支取时间 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.果农 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.金额 = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.备注 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.splitContainer2 = new System.Windows.Forms.SplitContainer();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
@@ -48,11 +53,6 @@
             this.label1 = new System.Windows.Forms.Label();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
-            this.ID = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.支取时间 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.果农 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.金额 = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.备注 = new System.Windows.Forms.DataGridViewTextBoxColumn();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer2)).BeginInit();
             this.splitContainer2.Panel1.SuspendLayout();
@@ -109,6 +109,7 @@
             this.果农,
             this.金额,
             this.备注});
+            this.dataGridView1.ContextMenuStrip = this.contextMenuStrip1;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(0, 0);
             this.dataGridView1.MultiSelect = false;
@@ -121,6 +122,49 @@
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellFormatting += new System.Windows.Forms.DataGridViewCellFormattingEventHandler(this.dataGridView1_CellFormatting);
             this.dataGridView1.CellMouseDoubleClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_CellMouseDoubleClick);
+            // 
+            // ID
+            // 
+            this.ID.DataPropertyName = "Id";
+            this.ID.HeaderText = "ID";
+            this.ID.Name = "ID";
+            this.ID.ReadOnly = true;
+            this.ID.Visible = false;
+            // 
+            // 支取时间
+            // 
+            this.支取时间.DataPropertyName = "BillDate";
+            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.支取时间.DefaultCellStyle = dataGridViewCellStyle2;
+            this.支取时间.HeaderText = "支取时间";
+            this.支取时间.Name = "支取时间";
+            this.支取时间.ReadOnly = true;
+            // 
+            // 果农
+            // 
+            this.果农.DataPropertyName = "GuoNong";
+            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.果农.DefaultCellStyle = dataGridViewCellStyle3;
+            this.果农.HeaderText = "果农";
+            this.果农.Name = "果农";
+            this.果农.ReadOnly = true;
+            // 
+            // 金额
+            // 
+            this.金额.DataPropertyName = "Money";
+            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.金额.DefaultCellStyle = dataGridViewCellStyle4;
+            this.金额.HeaderText = "金额（元）";
+            this.金额.Name = "金额";
+            this.金额.ReadOnly = true;
+            // 
+            // 备注
+            // 
+            this.备注.DataPropertyName = "Remark";
+            this.备注.HeaderText = "备注";
+            this.备注.Name = "备注";
+            this.备注.ReadOnly = true;
+            this.备注.Width = 400;
             // 
             // splitContainer2
             // 
@@ -247,49 +291,6 @@
             this.splitContainer1.Size = new System.Drawing.Size(749, 513);
             this.splitContainer1.SplitterDistance = 44;
             this.splitContainer1.TabIndex = 1;
-            // 
-            // ID
-            // 
-            this.ID.DataPropertyName = "Id";
-            this.ID.HeaderText = "ID";
-            this.ID.Name = "ID";
-            this.ID.ReadOnly = true;
-            this.ID.Visible = false;
-            // 
-            // 支取时间
-            // 
-            this.支取时间.DataPropertyName = "BillDate";
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.支取时间.DefaultCellStyle = dataGridViewCellStyle2;
-            this.支取时间.HeaderText = "支取时间";
-            this.支取时间.Name = "支取时间";
-            this.支取时间.ReadOnly = true;
-            // 
-            // 果农
-            // 
-            this.果农.DataPropertyName = "GuoNong";
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.果农.DefaultCellStyle = dataGridViewCellStyle3;
-            this.果农.HeaderText = "果农";
-            this.果农.Name = "果农";
-            this.果农.ReadOnly = true;
-            // 
-            // 金额
-            // 
-            this.金额.DataPropertyName = "Money";
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.金额.DefaultCellStyle = dataGridViewCellStyle4;
-            this.金额.HeaderText = "金额（元）";
-            this.金额.Name = "金额";
-            this.金额.ReadOnly = true;
-            // 
-            // 备注
-            // 
-            this.备注.DataPropertyName = "Remark";
-            this.备注.HeaderText = "备注";
-            this.备注.Name = "备注";
-            this.备注.ReadOnly = true;
-            this.备注.Width = 400;
             // 
             // ZhiQianList
             // 

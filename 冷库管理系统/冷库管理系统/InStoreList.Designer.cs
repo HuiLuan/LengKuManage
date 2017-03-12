@@ -29,15 +29,15 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle4 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle5 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle6 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle7 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle8 = new System.Windows.Forms.DataGridViewCellStyle();
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle9 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle19 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle20 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle21 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle22 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle23 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle24 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle25 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle26 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle27 = new System.Windows.Forms.DataGridViewCellStyle();
             this.splitContainer1 = new System.Windows.Forms.SplitContainer();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
@@ -66,6 +66,9 @@
             this.label4 = new System.Windows.Forms.Label();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.删除选中入库信息ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.label7 = new System.Windows.Forms.Label();
+            this.txtGuoNong = new System.Windows.Forms.TextBox();
+            this.button3 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.splitContainer1)).BeginInit();
             this.splitContainer1.Panel1.SuspendLayout();
             this.splitContainer1.Panel2.SuspendLayout();
@@ -88,6 +91,7 @@
             // 
             // splitContainer1.Panel1
             // 
+            this.splitContainer1.Panel1.Controls.Add(this.txtGuoNong);
             this.splitContainer1.Panel1.Controls.Add(this.button2);
             this.splitContainer1.Panel1.Controls.Add(this.button1);
             this.splitContainer1.Panel1.Controls.Add(this.dateTimePicker2);
@@ -95,6 +99,7 @@
             this.splitContainer1.Panel1.Controls.Add(this.label3);
             this.splitContainer1.Panel1.Controls.Add(this.label2);
             this.splitContainer1.Panel1.Controls.Add(this.cbxGuoNong);
+            this.splitContainer1.Panel1.Controls.Add(this.label7);
             this.splitContainer1.Panel1.Controls.Add(this.label1);
             // 
             // splitContainer1.Panel2
@@ -106,9 +111,9 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(40, 11);
+            this.button2.Location = new System.Drawing.Point(12, 9);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(75, 23);
+            this.button2.Size = new System.Drawing.Size(59, 23);
             this.button2.TabIndex = 5;
             this.button2.Text = "新  增";
             this.button2.UseVisualStyleBackColor = true;
@@ -163,15 +168,15 @@
             // cbxGuoNong
             // 
             this.cbxGuoNong.FormattingEnabled = true;
-            this.cbxGuoNong.Location = new System.Drawing.Point(243, 12);
+            this.cbxGuoNong.Location = new System.Drawing.Point(130, 11);
             this.cbxGuoNong.Name = "cbxGuoNong";
-            this.cbxGuoNong.Size = new System.Drawing.Size(103, 20);
+            this.cbxGuoNong.Size = new System.Drawing.Size(84, 20);
             this.cbxGuoNong.TabIndex = 1;
             // 
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(208, 15);
+            this.label1.Location = new System.Drawing.Point(95, 16);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(29, 12);
             this.label1.TabIndex = 0;
@@ -191,6 +196,7 @@
             // 
             // splitContainer2.Panel2
             // 
+            this.splitContainer2.Panel2.Controls.Add(this.button3);
             this.splitContainer2.Panel2.Controls.Add(this.lblSumMoney);
             this.splitContainer2.Panel2.Controls.Add(this.lblSumNumber);
             this.splitContainer2.Panel2.Controls.Add(this.lblSumWeight);
@@ -205,14 +211,14 @@
             // 
             this.dataGridView1.AllowUserToAddRows = false;
             this.dataGridView1.AllowUserToDeleteRows = false;
-            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
-            dataGridViewCellStyle1.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            dataGridViewCellStyle1.ForeColor = System.Drawing.SystemColors.WindowText;
-            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.SystemColors.Highlight;
-            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
-            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            dataGridViewCellStyle19.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            dataGridViewCellStyle19.BackColor = System.Drawing.SystemColors.Control;
+            dataGridViewCellStyle19.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            dataGridViewCellStyle19.ForeColor = System.Drawing.SystemColors.WindowText;
+            dataGridViewCellStyle19.SelectionBackColor = System.Drawing.SystemColors.Highlight;
+            dataGridViewCellStyle19.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
+            dataGridViewCellStyle19.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
+            this.dataGridView1.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle19;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.DisableResizing;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
             this.ID,
@@ -248,8 +254,8 @@
             // 入库时间
             // 
             this.入库时间.DataPropertyName = "BillDate";
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.入库时间.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle20.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.入库时间.DefaultCellStyle = dataGridViewCellStyle20;
             this.入库时间.HeaderText = "入库时间";
             this.入库时间.Name = "入库时间";
             this.入库时间.ReadOnly = true;
@@ -257,8 +263,8 @@
             // 果农
             // 
             this.果农.DataPropertyName = "GuoNong";
-            dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.果农.DefaultCellStyle = dataGridViewCellStyle3;
+            dataGridViewCellStyle21.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.果农.DefaultCellStyle = dataGridViewCellStyle21;
             this.果农.HeaderText = "果农";
             this.果农.Name = "果农";
             this.果农.ReadOnly = true;
@@ -266,8 +272,8 @@
             // 规格
             // 
             this.规格.DataPropertyName = "GuiGe";
-            dataGridViewCellStyle4.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.规格.DefaultCellStyle = dataGridViewCellStyle4;
+            dataGridViewCellStyle22.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.规格.DefaultCellStyle = dataGridViewCellStyle22;
             this.规格.HeaderText = "规格";
             this.规格.Name = "规格";
             this.规格.ReadOnly = true;
@@ -275,8 +281,8 @@
             // 级别
             // 
             this.级别.DataPropertyName = "JiBie";
-            dataGridViewCellStyle5.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.级别.DefaultCellStyle = dataGridViewCellStyle5;
+            dataGridViewCellStyle23.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.级别.DefaultCellStyle = dataGridViewCellStyle23;
             this.级别.HeaderText = "级别";
             this.级别.Name = "级别";
             this.级别.ReadOnly = true;
@@ -284,8 +290,8 @@
             // 重量
             // 
             this.重量.DataPropertyName = "Weight";
-            dataGridViewCellStyle6.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.重量.DefaultCellStyle = dataGridViewCellStyle6;
+            dataGridViewCellStyle24.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.重量.DefaultCellStyle = dataGridViewCellStyle24;
             this.重量.HeaderText = "重量（公斤）";
             this.重量.Name = "重量";
             this.重量.ReadOnly = true;
@@ -294,8 +300,8 @@
             // 单价
             // 
             this.单价.DataPropertyName = "Price";
-            dataGridViewCellStyle7.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.单价.DefaultCellStyle = dataGridViewCellStyle7;
+            dataGridViewCellStyle25.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.单价.DefaultCellStyle = dataGridViewCellStyle25;
             this.单价.HeaderText = "单价（元/公斤）";
             this.单价.Name = "单价";
             this.单价.ReadOnly = true;
@@ -304,8 +310,8 @@
             // 数量
             // 
             this.数量.DataPropertyName = "Number";
-            dataGridViewCellStyle8.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.数量.DefaultCellStyle = dataGridViewCellStyle8;
+            dataGridViewCellStyle26.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.数量.DefaultCellStyle = dataGridViewCellStyle26;
             this.数量.HeaderText = "数量（桶）";
             this.数量.Name = "数量";
             this.数量.ReadOnly = true;
@@ -313,8 +319,8 @@
             // 金额
             // 
             this.金额.DataPropertyName = "Money";
-            dataGridViewCellStyle9.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
-            this.金额.DefaultCellStyle = dataGridViewCellStyle9;
+            dataGridViewCellStyle27.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleCenter;
+            this.金额.DefaultCellStyle = dataGridViewCellStyle27;
             this.金额.HeaderText = "金额（元）";
             this.金额.Name = "金额";
             this.金额.ReadOnly = true;
@@ -322,7 +328,7 @@
             // lblSumMoney
             // 
             this.lblSumMoney.AutoSize = true;
-            this.lblSumMoney.Location = new System.Drawing.Point(706, 13);
+            this.lblSumMoney.Location = new System.Drawing.Point(594, 12);
             this.lblSumMoney.Name = "lblSumMoney";
             this.lblSumMoney.Size = new System.Drawing.Size(11, 12);
             this.lblSumMoney.TabIndex = 1;
@@ -331,7 +337,7 @@
             // lblSumNumber
             // 
             this.lblSumNumber.AutoSize = true;
-            this.lblSumNumber.Location = new System.Drawing.Point(587, 13);
+            this.lblSumNumber.Location = new System.Drawing.Point(475, 12);
             this.lblSumNumber.Name = "lblSumNumber";
             this.lblSumNumber.Size = new System.Drawing.Size(11, 12);
             this.lblSumNumber.TabIndex = 1;
@@ -340,7 +346,7 @@
             // lblSumWeight
             // 
             this.lblSumWeight.AutoSize = true;
-            this.lblSumWeight.Location = new System.Drawing.Point(468, 13);
+            this.lblSumWeight.Location = new System.Drawing.Point(356, 12);
             this.lblSumWeight.Name = "lblSumWeight";
             this.lblSumWeight.Size = new System.Drawing.Size(11, 12);
             this.lblSumWeight.TabIndex = 1;
@@ -349,7 +355,7 @@
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(648, 13);
+            this.label6.Location = new System.Drawing.Point(536, 12);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(53, 12);
             this.label6.TabIndex = 0;
@@ -358,7 +364,7 @@
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(533, 13);
+            this.label5.Location = new System.Drawing.Point(421, 12);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(53, 12);
             this.label5.TabIndex = 0;
@@ -367,7 +373,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(421, 13);
+            this.label4.Location = new System.Drawing.Point(309, 12);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(53, 12);
             this.label4.TabIndex = 0;
@@ -386,6 +392,32 @@
             this.删除选中入库信息ToolStripMenuItem.Size = new System.Drawing.Size(172, 22);
             this.删除选中入库信息ToolStripMenuItem.Text = "删除选中入库信息";
             this.删除选中入库信息ToolStripMenuItem.Click += new System.EventHandler(this.删除选中入库信息ToolStripMenuItem_Click);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(230, 16);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(29, 12);
+            this.label7.TabIndex = 0;
+            this.label7.Text = "果农";
+            // 
+            // txtGuoNong
+            // 
+            this.txtGuoNong.Location = new System.Drawing.Point(258, 11);
+            this.txtGuoNong.Name = "txtGuoNong";
+            this.txtGuoNong.Size = new System.Drawing.Size(100, 21);
+            this.txtGuoNong.TabIndex = 6;
+            // 
+            // button3
+            // 
+            this.button3.Location = new System.Drawing.Point(730, 7);
+            this.button3.Name = "button3";
+            this.button3.Size = new System.Drawing.Size(75, 23);
+            this.button3.TabIndex = 2;
+            this.button3.Text = "打  印";
+            this.button3.UseVisualStyleBackColor = true;
+            this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // InStoreList
             // 
@@ -446,5 +478,8 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
         private System.Windows.Forms.ToolStripMenuItem 删除选中入库信息ToolStripMenuItem;
+        private System.Windows.Forms.TextBox txtGuoNong;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.Button button3;
     }
 }

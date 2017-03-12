@@ -79,6 +79,10 @@ namespace 冷库管理系统
                 {
                     list = list.Where(x => x.BillDate <= maxdate);
                 }
+                if (!string.IsNullOrWhiteSpace(txtGuoNong.Text))
+                {
+                    list = list.Where(x => x.GuoNong.Name.Contains(txtGuoNong.Text));
+                }
                 var dataList = list.ToList();
                 dataGridView1.DataSource = dataList;
 
@@ -193,7 +197,7 @@ namespace 冷库管理系统
             }
             string footstr = String.Format("总重量:{0} 总数量:{1} 总金额:{2} 冷藏费:{3} 实际金额:{4} 支取金额:{5} 支付金额:{6}",
                 lblSumWeight.Text, lblSumNumber.Text, lblSumMoney.Text, lblLengCangFei.Text, lblSumShiJiMoney.Text,
-                lblZhiQuMoney.Text, lblZhiQuMoney.Text); 
+                lblZhiQuMoney.Text, lblLastPayMoney.Text); 
             PrintDGV.InitFootStr(footstr);
             PrintDGV.Print_DataGridView(this.dataGridView1);
         }

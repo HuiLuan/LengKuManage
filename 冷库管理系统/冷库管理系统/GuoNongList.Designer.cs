@@ -58,7 +58,7 @@
             // 删除选中ToolStripMenuItem
             // 
             this.删除选中ToolStripMenuItem.Name = "删除选中ToolStripMenuItem";
-            this.删除选中ToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
+            this.删除选中ToolStripMenuItem.Size = new System.Drawing.Size(124, 22);
             this.删除选中ToolStripMenuItem.Text = "删除选中";
             this.删除选中ToolStripMenuItem.Click += new System.EventHandler(this.删除选中ToolStripMenuItem_Click);
             // 
@@ -129,7 +129,6 @@
             this.序号,
             this.姓名,
             this.备注});
-            this.dataGridView1.ContextMenuStrip = this.contextMenuStrip1;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.dataGridView1.Location = new System.Drawing.Point(0, 0);
             this.dataGridView1.MultiSelect = false;

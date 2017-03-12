@@ -67,6 +67,7 @@ namespace 冷库管理系统
                 PrintAllRows = true; //dlg.PrintAllRows;
                 FitToPageWidth = true;//dlg.FitToPageWidth;
                 var list=new List<string>();
+                list.Add("入库时间");
                 list.Add("出库时间");
                 list.Add("果农");
                 list.Add("规格");
@@ -278,7 +279,7 @@ namespace 冷库管理系统
                                 ((Type)ColumnTypes[i]).Name == "DataGridViewLinkColumn")
                             {
                                 var cellValue = ObjToString(Cel.Value);
-                                if (Cel.OwningColumn.HeaderText == "出库时间")
+                                if (Cel.OwningColumn.HeaderText == "出库时间"|| Cel.OwningColumn.HeaderText == "入库时间")
                                 {
                                     cellValue = Convert.ToDateTime(Cel.Value).ToString("yyyy-MM-dd");
                                 }
@@ -386,10 +387,12 @@ namespace 冷库管理系统
             // Detemining rows number to print
             if (PrintAllRows)
             {
-                if (dgv.Rows[dgv.Rows.Count - 1].IsNewRow)
-                    cnt = dgv.Rows.Count - 2; // When the DataGridView doesn't allow adding rows
-                else
-                    cnt = dgv.Rows.Count - 1; // When the DataGridView allows adding rows
+                //                if (dgv.Rows[dgv.Rows.Count - 1].IsNewRow)
+                //                    cnt = dgv.Rows.Count - 2; // When the DataGridView doesn't allow adding rows
+                //                else
+                //                    cnt = dgv.Rows.Count - 1; // When the DataGridView allows adding rows
+
+                cnt = dgv.Rows.Count;// 栾慧
             }
             else
                 cnt = dgv.SelectedRows.Count;
